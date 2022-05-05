@@ -16,7 +16,7 @@ phases:
       - echo Build started on `date`
       - echo Building the docker  image.....
       - mvn clean package
-      - docker login -u $dockerhub_username -p $dockerhub_password
+      - docker login --username $DOCKERHUB_USERNAME --password $DOCKERHUB_PASS
       - docker build -t $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$IMAGE_REPO_NAME:$IMAGE_TAG .
 
   post_build:
