@@ -8,6 +8,7 @@ phases:
 
   build:
     commands:
+      - cp ./settings.xml /root/.m2/settings.xml
       - IMAGE_REPO_NAME=freteproject
       - AWS_ACCOUNT_ID="$account_id"
       - AWS_DEFAULT_REGION=sa-east-1
